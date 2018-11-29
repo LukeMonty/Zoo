@@ -43,7 +43,7 @@ public class TestAnimal {
 	@Test
 	public void testRabbitNoise() {
 		Rabbit thing = new Rabbit(4, "Black", 2, 1);
-		assertEquals("", thing.makeNoise());
+		assertEquals("...", thing.makeNoise());
 	}
 	
 	@Test
@@ -75,5 +75,19 @@ public class TestAnimal {
 		Zoo newZoo = new Zoo();
 		newZoo.addAnimals();
 		assertNotNull(newZoo.sortMammals());
+	}
+	@Test
+	public void testMammalType() {
+		Rabbit rabbit = new Rabbit(4, "White", 1, 1);
+		assertEquals("Mammal", rabbit.typeToString());
+		
+			
+		
+	}
+	@Test
+	public void testBirdType() {
+		Penguin thing = new Penguin(4, "Black", 2, 1);
+		assertEquals("Bird", thing.typeToString());	
+		
 	}
 }

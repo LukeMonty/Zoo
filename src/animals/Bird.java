@@ -8,5 +8,7 @@ public abstract class Bird extends Animal {
 		super(weight, colour, size);
 		this.wingSpan = wingSpan;
 	}
-	
+	public String typeToString() {
+		return "Bird";
+	}
 }

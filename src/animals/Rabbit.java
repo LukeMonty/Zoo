@@ -14,7 +14,7 @@ public class Rabbit extends Mammal {
 	@Override
 	public String makeNoise() {
 		// TODO Auto-generated method stub
-		return "";
+		return "...";
 	}
 
 }

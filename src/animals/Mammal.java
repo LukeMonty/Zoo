@@ -10,5 +10,7 @@ public abstract class Mammal extends Animal {
 	}
 
 	
-
+	public String typeToString() {
+		return "Mammal";
+	}
 }

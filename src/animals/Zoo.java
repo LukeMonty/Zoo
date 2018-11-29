@@ -38,13 +38,17 @@ public class Zoo {
 
 	public void printMammalNoise() {
 		for (Animal animal : mammals) {
-			System.out.println(animal.makeNoise());
+			Mammal an = (Mammal) animal;
+
+			System.out.println(an.typeToString() + " Type: " + an.getClass().getSimpleName() + " goes " + animal.makeNoise());
 		}
 
 	}
+
 	public void printBirdNoise() {
 		for (Animal animal : birds) {
-			System.out.println(animal.makeNoise());
+			Bird bi = (Bird) animal;
+			System.out.println(bi.typeToString() + " Type: " + bi.getClass().getSimpleName() + " goes " + bi.makeNoise());
 		}
 
 	}
