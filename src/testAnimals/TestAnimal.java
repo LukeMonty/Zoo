@@ -40,6 +40,11 @@ public class TestAnimal {
 		Cat thing = new Cat(4, "Black", 2, 1);
 		assertEquals("Meow!", thing.makeNoise());
 	}
+	@Test
+	public void testRabbitNoise() {
+		Rabbit thing = new Rabbit(4, "Black", 2, 1);
+		assertEquals("", thing.makeNoise());
+	}
 	
 	@Test
 	public void testRabbitConstuctor() {
@@ -57,5 +62,18 @@ public class TestAnimal {
 		Zoo newZoo = new Zoo();
 		assertNotNull(newZoo);
 		
+	}
+	
+	@Test
+	public void testSortBirds() {
+		Zoo newZoo = new Zoo();
+		newZoo.addAnimals();
+		assertNotNull(newZoo.sortBirds());
+	}
+	@Test
+	public void testSortMammals() {
+		Zoo newZoo = new Zoo();
+		newZoo.addAnimals();
+		assertNotNull(newZoo.sortMammals());
 	}
 }
