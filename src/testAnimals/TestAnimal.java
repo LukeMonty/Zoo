@@ -65,18 +65,6 @@ public class TestAnimal {
 	}
 	
 	@Test
-	public void testSortBirds() {
-		Zoo newZoo = new Zoo();
-		newZoo.addAnimals();
-		assertNotNull(newZoo.sortBirds());
-	}
-	@Test
-	public void testSortMammals() {
-		Zoo newZoo = new Zoo();
-		newZoo.addAnimals();
-		assertNotNull(newZoo.sortMammals());
-	}
-	@Test
 	public void testMammalType() {
 		Rabbit rabbit = new Rabbit(4, "White", 1, 1);
 		assertEquals("Mammal", rabbit.typeToString());
