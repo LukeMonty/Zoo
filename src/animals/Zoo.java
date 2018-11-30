@@ -13,8 +13,6 @@ public class Zoo {
 	Eagle eagle = new Eagle(4, "Black", 3, 5, "Golden");
 
 	List<Animal> zoo = new ArrayList<>();
-	List<Animal> mammals = new ArrayList<>();
-	List<Animal> birds = new ArrayList<>();
 
 	public List<Animal> addAnimals() {
 
@@ -28,28 +26,19 @@ public class Zoo {
 
 	}
 
-	public List<Animal> sortMammals() {
-		return mammals = zoo.stream().filter(an -> an instanceof Mammal).collect(Collectors.toList());
-	}
-
-	public List<Animal> sortBirds() {
-		return birds = zoo.stream().filter(an -> an instanceof Bird).collect(Collectors.toList());
-	}
-
 	public void printMammalNoise() {
-		for (Animal animal : mammals) {
-			Mammal an = (Mammal) animal;
 
-			System.out.println(an.typeToString() + " Type: " + an.getClass().getSimpleName() + " goes " + animal.makeNoise());
-		}
+		zoo.stream().filter(an -> an instanceof Mammal)
+					.map(mammal -> (Mammal) mammal)
+					.forEach(m -> System.out.println(m.typeToString() + " Type: " + m.getClass().getSimpleName() + " goes " + m.makeNoise()));
 
 	}
 
 	public void printBirdNoise() {
-		for (Animal animal : birds) {
-			Bird bi = (Bird) animal;
-			System.out.println(bi.typeToString() + " Type: " + bi.getClass().getSimpleName() + " goes " + bi.makeNoise());
-		}
+
+		zoo.stream().filter(an -> an instanceof Bird)
+					.map(bird -> (Bird) bird)
+					.forEach(b -> System.out.println(b.typeToString() + " Type: " + b.getClass().getSimpleName() + " goes " + b.makeNoise()));
 
 	}
 

@@ -7,8 +7,8 @@ public class Main {
 	
 	public static void main(String[] args) {
 		zoo.addAnimals();
-		zoo.sortMammals();
-		zoo.sortBirds();
+		
+		
 		zoo.printMammalNoise();
 		zoo.printBirdNoise();
 		
